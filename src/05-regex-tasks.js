@@ -32,7 +32,10 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-  throw new Error('Not implemented');
+  const base = '[a-f0-9]';
+  const regExpForGuid = `^{${base}{8}-${base}{4}-${base}{4}-${base}{4}-${base}{12}}$`;
+
+  return new RegExp(regExpForGuid, 'i');
 }
 
 
@@ -54,7 +57,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  throw new Error('Not implemented');
+  return /p.t/;
 }
 
 
